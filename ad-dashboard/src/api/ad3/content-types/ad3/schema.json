@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ad3s",
+  "info": {
+    "singularName": "ad3",
+    "pluralName": "ad3s",
+    "displayName": "Ad3"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "link": {
+      "type": "string"
+    },
+    "deviceType": {
+      "type": "enumeration",
+      "enum": [
+        "desktop",
+        "mobile"
+      ]
+    }
+  }
+}

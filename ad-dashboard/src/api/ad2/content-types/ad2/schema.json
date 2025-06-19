@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ad2s",
+  "info": {
+    "singularName": "ad2",
+    "pluralName": "ad2s",
+    "displayName": "Ad2"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "link": {
+      "type": "string"
+    },
+    "deviceType": {
+      "type": "enumeration",
+      "enum": [
+        "desktop",
+        "mobile"
+      ]
+    }
+  }
+}

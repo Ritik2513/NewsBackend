@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ad1s",
+  "info": {
+    "singularName": "ad1",
+    "pluralName": "ad1s",
+    "displayName": "Ad1"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "link": {
+      "type": "string"
+    },
+    "deviceType": {
+      "type": "enumeration",
+      "enum": [
+        "desktop",
+        "mobile"
+      ]
+    }
+  }
+}
