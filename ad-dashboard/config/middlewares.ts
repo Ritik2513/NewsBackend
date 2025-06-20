@@ -5,7 +5,7 @@ export default [
   {
     name: 'strapi::cors',
     config: {
-      origin: ['https://newstrendi.com/'], // allow your React app
+      origin: ['https://newstrendi.com'], // allow your React app
       methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
       headers: '*',
       credentials: true,
