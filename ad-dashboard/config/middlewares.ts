@@ -1,20 +1,33 @@
 export default [
-  'strapi::logger',
-  'strapi::errors',
-  'strapi::security',
+  "strapi::logger",
+  "strapi::errors",
   {
-    name: 'strapi::cors',
+    name: "strapi::security",
     config: {
-      origin: ['https://newstrendi.com'], // allow your React app
-      methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
-      headers: '*',
+      contentSecurityPolicy: {
+        useDefaults: true,
+        directives: {
+          "connect-src": ["'self'", "https:"],
+          "img-src": ["'self'", "data:", "blob:", "res.cloudinary.com"],
+          "media-src": ["'self'", "data:", "blob:", "res.cloudinary.com"],
+          upgradeInsecureRequests: null,
+        },
+      },
+    },
+  },
+  {
+    name: "strapi::cors",
+    config: {
+      origin: ["https://newstrendi.com"], // allow your React app
+      methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+      headers: "*",
       credentials: true,
     },
   },
-  'strapi::poweredBy',
-  'strapi::query',
-  'strapi::body',
-  'strapi::session',
-  'strapi::favicon',
-  'strapi::public',
+  "strapi::poweredBy",
+  "strapi::query",
+  "strapi::body",
+  "strapi::session",
+  "strapi::favicon",
+  "strapi::public",
 ];
